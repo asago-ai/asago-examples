@@ -5,7 +5,7 @@ requires-python = ">=3.11"
 dependencies = [
     "asago-policy-mapper @ git+https://github.com/asago-ai/asago-policy-mapper",
     "ipywidgets>=8.0",
-    "pyarrow>=16,<18",
+    "pyarrow>=23.0.1,<24",
     "datasets>=2,<4",
     "instructor>=1.0,<=1.15.1"
 ]
