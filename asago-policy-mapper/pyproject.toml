@@ -6,5 +6,6 @@ dependencies = [
     "asago-policy-mapper @ git+https://github.com/asago-ai/asago-policy-mapper",
     "ipywidgets>=8.0",
     "pyarrow>=16,<18",
-    "datasets>=2,<4"
+    "datasets>=2,<4",
+    "instructor>=1.0,<=1.15.1"
 ]
