@@ -9,5 +9,8 @@ policy-mapper = [
     "asago-policy-mapper-examples",
 ]
 
+[tool.uv.workspace]
+members = ["asago-*"]
+
 [tool.uv.sources]
-asago-policy-mapper-examples = { path = "./asago-policy-mapper" }
+asago-policy-mapper-examples = { workspace = true }
