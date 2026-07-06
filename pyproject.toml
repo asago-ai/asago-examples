@@ -10,9 +10,13 @@ dependencies = [
 policy-mapper = [
     "asago-policy-mapper-examples",
 ]
+midojo = [
+    "asago-midojo-examples",
+]
 
 [tool.uv.workspace]
 members = ["asago-*"]
 
 [tool.uv.sources]
 asago-policy-mapper-examples = { workspace = true }
+asago-midojo-examples = { workspace = true }

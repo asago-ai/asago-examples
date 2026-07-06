@@ -1,0 +1,7 @@
+[project]
+name = "asago-midojo-examples"
+version = "0.1.0"
+dependencies = [
+    "midojo @ git+https://github.com/asago-ai/midojo.git",
+    "midojo-suites @ git+https://github.com/asago-ai/midojo-suites.git",
+]

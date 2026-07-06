@@ -7,6 +7,7 @@ Example notebooks and datasets for [Asago](https://github.com/asago-ai) projects
 | Folder | Description | Install group |
 |--------|-------------|---------------|
 | [`asago-policy-mapper/`](./asago-policy-mapper/) | Risk extraction from policy documents | `policy-mapper` |
+| [`asago-midojo/`](./asago-midojo/) | MiDojo prompt injection red-teaming demo (minibank ladder) | `midojo` |
 
 ## Quickstart
 
