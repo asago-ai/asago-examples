@@ -1,11 +1,10 @@
 [project]
-name = "asago-examples"
+name = "asago-policy-mapper-examples"
 version = "0.1.0"
-requires-python = ">=3.11"
 dependencies = [
     "asago-policy-mapper @ git+https://github.com/asago-ai/asago-policy-mapper",
     "ipywidgets>=8.0",
-    "pyarrow>=16,<18",
+    "pyarrow>=16",
     "datasets>=2,<4",
     "instructor>=1.0,<=1.15.1"
 ]
