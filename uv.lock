@@ -275,7 +275,7 @@ wheels = [
 [[package]]
 name = "asago-artifact-generator"
 version = "0.1.0"
-source = { git = "https://github.com/asago-ai/artifact-generator#b0b65f5dedafe5fe348d39b1692a4a7a6032ae4a" }
+source = { git = "https://github.com/asago-ai/artifact-generator#28e3e04cec2fa006a939d0ad011d02721b31db7b" }
 dependencies = [
     { name = "openai" },
     { name = "pydantic" },
