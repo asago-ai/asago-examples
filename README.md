@@ -7,6 +7,7 @@ Example notebooks and datasets for [Asago](https://github.com/asago-ai) projects
 | Folder | Description | Install group |
 |--------|-------------|---------------|
 | [`asago-policy-mapper/`](./asago-policy-mapper/) | Risk extraction from policy documents | `policy-mapper` |
+| [`asago-artifact-generator/`](./asago-artifact-generator/) | Garak probe artifacts from scenario YAMLs | `artifact-generator` |
 
 ## Quickstart
 
