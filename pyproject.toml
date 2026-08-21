@@ -3,7 +3,7 @@ name = "asago-examples"
 version = "0.1.0"
 requires-python = ">=3.14"
 dependencies = [
-    "jupyterlab>=4.6.1"
+    "jupyterlab>=4.6.2"
 ]
 
 [project.optional-dependencies]
