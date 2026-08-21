@@ -1,0 +1,7 @@
+[project]
+name = "asago-artifact-generator-examples"
+version = "0.1.0"
+dependencies = [
+    "asago-artifact-generator @ git+https://github.com/asago-ai/artifact-generator",
+    "ipywidgets>=8.0",
+]

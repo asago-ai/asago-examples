@@ -10,9 +10,13 @@ dependencies = [
 policy-mapper = [
     "asago-policy-mapper-examples",
 ]
+artifact-generator = [
+    "asago-artifact-generator-examples",
+]
 
 [tool.uv.workspace]
 members = ["asago-*"]
 
 [tool.uv.sources]
 asago-policy-mapper-examples = { workspace = true }
+asago-artifact-generator-examples = { workspace = true }

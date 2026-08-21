@@ -1,0 +1,11 @@
+{
+  "ok": false,
+  "checks": "Artifact structural gate after LLM generation: validate_tool_flow checks Chat Completions tool pairing (tool_calls immediately followed by matching role=tool turns), '- name(params):' tool declarations on the system turn, called names subseteq declared names, last-turn injection role, adversarial last turn, and attack_turn_index; detector_rubric has non-empty judge_prompt, attack_success, and attack_blocked lists; injection_surface matches the classified surface; Pydantic schema keeps tool_calls, tool_call_id, and name on turns.",
+  "errors": [
+    "system prompt declares no tools in '- name(params):' form",
+    "turn 4: 'generate_payment_plan' not declared in system prompt",
+    "last turn is 'tool', expected 'user' for user_turn",
+    "attack_turn_index does not point at the last turn",
+    "user_turn artifact must end with role=user"
+  ]
+}
