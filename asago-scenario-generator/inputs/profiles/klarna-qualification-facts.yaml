@@ -1,0 +1,47 @@
+schema_version: '1'
+facts:
+- fact:
+    namespace: profile
+    fact_id: capabilities.code_interpreter
+    value_type: boolean
+    property_path: []
+  status: absent
+- fact:
+    namespace: profile
+    fact_id: capabilities.external_content_ingestion
+    value_type: boolean
+    property_path: []
+  status: present
+  value: true
+- fact:
+    namespace: profile
+    fact_id: capabilities.feedback_loop
+    value_type: boolean
+    property_path: []
+  status: absent
+- fact:
+    namespace: profile
+    fact_id: capabilities.long_term_memory
+    value_type: boolean
+    property_path: []
+  status: present
+  value: true
+- fact:
+    namespace: profile
+    fact_id: capabilities.planning_interface
+    value_type: boolean
+    property_path: []
+  status: absent
+- fact:
+    namespace: profile
+    fact_id: capabilities.reflection_mechanism
+    value_type: boolean
+    property_path: []
+  status: absent
+- fact:
+    namespace: profile
+    fact_id: capabilities.retrieval_corpus
+    value_type: boolean
+    property_path: []
+  status: present
+  value: true

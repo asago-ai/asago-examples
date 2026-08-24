@@ -15,6 +15,11 @@ asago-examples/
 │   ├── pyproject.toml          # member deps (installs asago-policy-mapper from GitHub)
 │   ├── policy_examples/        # sample policy documents (PDF, Markdown, DOCX)
 │   └── risk-extraction-demo.ipynb
+├── asago-scenario-generator/   # taxonomy/risk and STPA scenario generation
+│   ├── pyproject.toml
+│   ├── inputs/                 # use cases, risk extractions, SSSOM, reviewed profiles
+│   ├── taxonomy-risk-demo.ipynb
+│   └── stpa-demo.ipynb
 └── ...                         # future members are auto-discovered via "asago-*" glob
 ```
 

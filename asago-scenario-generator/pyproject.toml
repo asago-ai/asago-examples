@@ -1,0 +1,11 @@
+[project]
+name = "asago-scenario-generator-examples"
+version = "0.1.0"
+dependencies = [
+    "asago-scenario-generator @ git+https://github.com/asago-ai/asago-scenario-generator",
+    "ipywidgets>=8.0",
+    "pandas>=2.0",
+]
+
+[tool.setuptools]
+packages = []

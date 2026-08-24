@@ -1,0 +1,54 @@
+zones_active:
+- input
+- reasoning
+- tool_execution
+- memory
+entry_points:
+- name: user prompts via Klarna app and web flow
+  direction: bidirectional
+  controllability: direct
+confidence: high
+kc_subcodes:
+- KC1.1
+- KC2.1
+- KC3.3
+- KC4.3
+- KC5.3
+- KC6.1.2
+- KC6.3.2
+- KC6.3.3
+- KCX-HITL
+- KCX-PMEM
+tool_inventory:
+- name: refund processing API
+  description: Processes refunds for customer purchases, adjusting payment schedules and account balances
+- name: payment scheduling API
+  description: Reschedules or adjusts payment due dates for buy-now-pay-later installments
+- name: order lookup API
+  description: Retrieves customer purchase history, order details, item prices, merchant info, and payment status
+- name: account details API
+  description: Accesses authenticated customer account information including payment methods and account status
+- name: human agent escalation
+  description: Transfers the conversation to a human customer service agent when the AI cannot resolve the issue
+- name: RAG knowledge retrieval
+  description: Retrieves relevant support documentation and policy information to ground responses
+external_integrations:
+- name: Klarna backend payment and refund services
+  integration_type: api
+  auth_method: service_account
+  data_sensitivity: high
+- name: customer purchase and account data store
+  integration_type: api
+  auth_method: service_account
+  data_sensitivity: high
+- name: RAG knowledge base
+  integration_type: api
+  auth_method: service_account
+  data_sensitivity: medium
+trust_boundaries:
+- name: customer-input-to-conversational-reasoning
+  from_zone: input
+  to_zone: reasoning
+  controls:
+  - input validation
+  confidence: explicit

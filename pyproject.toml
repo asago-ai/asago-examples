@@ -13,6 +13,9 @@ policy-mapper = [
 artifact-generator = [
     "asago-artifact-generator-examples",
 ]
+scenario-generator = [
+    "asago-scenario-generator-examples",
+]
 
 [tool.uv.workspace]
 members = ["asago-*"]
@@ -20,3 +23,4 @@ members = ["asago-*"]
 [tool.uv.sources]
 asago-policy-mapper-examples = { workspace = true }
 asago-artifact-generator-examples = { workspace = true }
+asago-scenario-generator-examples = { workspace = true }
