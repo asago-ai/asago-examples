@@ -1,0 +1,12 @@
+[project]
+name = "asago-scenario-generator-examples"
+version = "0.1.0"
+dependencies = [
+    # Pin the merged generator reliability contract from PR #41.
+    "asago-scenario-generator @ git+https://github.com/asago-ai/asago-scenario-generator@c6a7355c2a3f18342d484f2f62901962b5e3baef",
+    "ipywidgets>=8.0",
+    "pandas>=2.0",
+]
+
+[tool.setuptools]
+packages = []

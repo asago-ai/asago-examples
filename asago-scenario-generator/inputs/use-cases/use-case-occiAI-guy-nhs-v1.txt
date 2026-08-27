@@ -1,0 +1,94 @@
+# Use Case: AI-Driven Patient Information Portal for NHS Outpatient Care
+
+| Field | Detail |
+|-------|--------|
+| **System Name** | OcciAI |
+| **Deployment** | Chelsea and Westminster Hospital NHS Foundation Trust, London, UK |
+| **Domain** | Healthcare / National Health Service (NHS) |
+| **Stage** | Pilot (scheduled 2025), surgical suite across ophthalmology, gynaecology, and trauma & orthopaedics |
+
+## System Purpose
+
+OcciAI is a conversational AI patient information portal designed to address two core problems in NHS outpatient care: (1) patient education gaps that lead to poor understanding of conditions, treatment options, and appointment processes, and (2) administrative overload on healthcare staff from routine information collection. The system targets first outpatient appointments, where the national Did Not Attend (DNA) rate averages 8.7%, costing NHS England approximately £1 billion annually.
+
+## Architecture and Components
+
+### AI-Generated Educational Videos
+The system generates personalised video content explaining the patient's condition and treatment options, based on their referral reason. Videos are delivered via AI-driven avatars. Content is customisable per hospital and available in multiple languages to serve diverse NHS patient populations including non-native English speakers, recent migrants, and patients with low literacy levels.
+
+### Conversational AI Chatbot
+An NLP-powered chatbot allows patients to ask follow-up questions in natural language (e.g., "What is a cataract?", "What will happen during surgery?"). The chatbot accepts questions in any supported language and responds in the same language. It provides clear, accessible explanations of diagnoses, medications, procedures, and aftercare instructions, translating complex medical terminology into plain language tailored to the patient's literacy level.
+
+### Patient Questionnaire Collection
+The system collects routine patient information through integrated questionnaires, replacing manual administrative processes. Collected information is summarised and uploaded to the patient's electronic health record (EHR).
+
+### Multi-Modal Interaction
+The system provides both text and visual interaction modes. Voice interaction is planned for accessibility (late 2025). The interface includes simplified navigation, clear visual design, alternative text font, and adjustable text sizes. The system aims to conform to Web Content Accessibility Guidelines (WCAG).
+
+## Integration Points
+
+### NHS App Integration
+OcciAI is designed to integrate with the NHS App, the national patient-facing digital health platform. This integration provides the primary patient access channel and ensures interoperability with existing NHS digital workflows.
+
+### Electronic Health Records (EHR)
+The system uploads summarised patient questionnaire responses and chatbot interaction data to the patient's electronic health record. This integrates with the NHS digital health record infrastructure that enables record sharing between health professionals.
+
+### Patient Referral Pathway
+The system operates within the NHS referral pathway, receiving patients referred by optometrists or general practitioners (GPs) through to pre-operative appointments. It intercepts the patient journey at the post-referral, pre-appointment stage.
+
+## Data Handling and Security
+
+### Data Collection
+Data collection is limited to elements essential for the pilot. The system collects patient questionnaire responses, chatbot interaction transcripts, and referral information.
+
+### Access Control
+Role-based access control ensures each team member can view only information relevant to their role. Authentication uses NHS passwords or multifactor authentication. A comprehensive audit log is maintained of all dataset accesses and modifications.
+
+### Encryption
+All identifiable data is encrypted at rest (in databases/servers) and in transit (over networks). Data is stored only in secure, approved NHS or accredited cloud environments.
+
+### De-identification
+Direct identifiers (names, NHS numbers, addresses) are removed or replaced prior to analysis. Any analysis of sensitive datasets takes place exclusively within a secure environment.
+
+### Compliance
+The system complies with GDPR, the NHS Data Security and Protection Toolkit (assessed by a third party), and NHS data-sharing agreements that define responsibilities, access rights, and security measures between the hospital and any university or external partners.
+
+### Data Sharing
+Data-sharing agreements govern the relationship between the NHS hospital and external partners (universities, Occi AI Ltd). These agreements set out responsibilities, access rights, and security measures.
+
+## Operational Context
+
+### Patient Demographics
+The system serves a highly diverse patient population: varying ages (including older adults with limited digital literacy), multiple languages and cultural backgrounds, patients with disabilities, non-native English speakers, recent migrants, and patients without access to traditional health education resources.
+
+### Staffing Context
+NHS resources are stretched with staff shortages and limited funding for new technologies. The system is intended to reduce administrative workload on clinical and administrative staff, freeing time for direct patient care.
+
+### Multi-Specialty Deployment
+The pilot spans three clinical specialties within the surgical suite (ophthalmology, gynaecology, trauma & orthopaedics), which serves eight different clinical areas total. The system must handle condition-specific educational content and questionnaires across these specialties.
+
+### Escalation Process
+For complex patient queries the chatbot cannot resolve, OcciAI includes an escalation process that transfers unresolved issues to human clinical or administrative staff.
+
+## Scalability Considerations
+
+The system is designed for potential rollout across multiple NHS Trusts, requiring a balance between local customisation (per-hospital content, specialty-specific materials) and standardised infrastructure. The design prioritises energy efficiency with lightweight, fine-tuned models hosted on green infrastructure, consistent with the NHS's net-zero emissions commitment.
+
+## Key Stakeholders
+
+- Patients (diverse demographics, varying digital literacy, multilingual)
+- Clinical staff (consultants, surgeons, nurses)
+- Administrative staff (appointment management, records)
+- NHS Trust management (governance, compliance)
+- External partners: Occi AI Ltd (system developer), University of West London (academic collaboration)
+- Regulatory bodies (GDPR, NHS Digital, NHS Data Security and Protection Toolkit)
+
+## Intended Outcomes
+
+- Reduce Did Not Attend (DNA) rates for first outpatient appointments
+- Improve patient health literacy and informed consent
+- Reduce administrative workload on NHS staff
+- Improve surgery conversion rates
+- Allow patients to decline referral pre-appointment if they do not wish to proceed
+- Address healthcare inequalities through multilingual, accessible design
+- Provide clinicians with better pre-appointment patient data via EHR integration

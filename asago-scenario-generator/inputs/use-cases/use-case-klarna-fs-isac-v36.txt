@@ -1,0 +1,80 @@
+# Use Case: AI Customer Service Agent for Consumer Fintech
+
+| Field | Detail |
+|-------|--------|
+| **System Name** | Klarna AI Assistant |
+| **Deployment** | Klarna (global), embedded in Klarna app and web flow |
+| **Domain** | Consumer fintech / Buy-now-pay-later |
+| **Stage** | Production (launched February 2024), partially walked back May 2025 |
+
+## System Purpose
+
+Klarna's AI assistant is a conversational AI agent deployed within the Klarna app and website to handle customer service interactions for a buy-now-pay-later financial services platform. The system handles the full customer service conversation lifecycle — answering questions, looking up account details, processing refunds, and scheduling payments — without a human agent in the loop for the majority of cases. It operates with authenticated context about the customer's purchases, payment status, and account history, available before the first message in any conversation. In its first month of operation, the assistant handled 2.3 million conversations (two-thirds of all customer service chats), performing the equivalent work of 853 full-time human agents.
+
+## Architecture and Components
+
+### Foundation Model
+The system is built on a GPT-4-class model from OpenAI with custom prompt engineering. OpenAI provided the core AI models while Klarna built the application layer integrating with its support infrastructure. Klarna was the first European company and the first fintech firm globally to launch a ChatGPT plugin, and subsequently developed the full agent system through direct engineering collaboration with OpenAI.
+
+### Authenticated User Context
+Unlike a generic chatbot, the assistant operates with full authenticated context about the customer. Before the first message in any conversation, the system has access to the customer's purchase history, payment status, merchant information, item prices, and purchase dates. This order-specific context is injected into responses — for example, chatting about an item automatically includes context on price, merchant, and purchase date.
+
+### Knowledge Grounding
+The system uses a RAG-style (retrieval-augmented generation) knowledge-grounding system to ensure responses are factually anchored in Klarna's policies, terms, and product information. The chatbot is designed with a whitelist approach — it does not go into details that are not on the approved information whitelist.
+
+### Conversational Interface
+The assistant is embedded directly in the Klarna app and web flow as the primary customer service channel, not bolted on as a side widget. It handles natural language customer queries across the full range of customer service topics including account inquiries, payment management, refund requests, and policy questions.
+
+## Integration Points
+
+### Klarna Backend Systems
+The assistant has direct API integrations to Klarna's backend services, enabling it to:
+- Look up customer account details and transaction history
+- Process refunds
+- Schedule and modify payments
+- Access order and merchant information
+- Retrieve payment status and plan details
+
+### Customer Authentication
+The system operates within Klarna's authenticated app environment, meaning the customer's identity and account context are established before the AI interaction begins. The assistant inherits the customer's authenticated session.
+
+## Data Handling and Security
+
+### Financial Data Access
+The assistant has read and write access to sensitive financial data including transaction histories, payment schedules, and refund processing capabilities. This places it in a high-stakes environment where incorrect actions have direct financial and compliance implications.
+
+### Compliance Context
+As a fintech operating across multiple jurisdictions, Klarna is subject to financial services regulations. The assistant's responses about fees, policies, payment terms, and refund eligibility have compliance implications — confident-but-wrong answers about money are a compliance problem, not just a customer satisfaction issue.
+
+### Internal AI Adoption
+Klarna made ChatGPT Enterprise available to all employees globally, with 90% of employees using generative AI tools daily. Communications, marketing, and legal teams have adoption rates of 93%, 88%, and 86% respectively. Company data is protected within the ChatGPT Enterprise environment.
+
+## Operational Context
+
+### Human-in-the-Loop and Escalation
+The system routes conversations to human agents when the AI flags ambiguity, regulated topics, or escalation triggers. During the beta period (January 2024), the system ran in full human-review mode where every AI response was reviewed by a human agent before being sent to the customer. This phase was used to catch edge cases and iteratively refine prompts.
+
+### Performance Characteristics
+- Average resolution time: under 2 minutes (vs. 11 minutes for human agents)
+- 25% reduction in repeat inquiries
+- Customer satisfaction scores at parity with human agents
+- Projected $40 million annual profit improvement
+
+### Development Timeline
+The system took approximately 6 months from kickoff to public launch, with an estimated initial investment of $2-3 million. Klarna had direct engineering access to OpenAI and a large dedicated internal team.
+
+### Scope Constraints
+Industry analysts noted that Klarna's deployment ran on a tightly scoped consumer-fintech use case with structured data, authenticated users, and a finite set of common intents — described as almost the easiest possible support workload for AI to absorb. Companies in B2B SaaS, healthcare, insurance claims, or contexts with ambiguous intents and unstructured data should expect different efficiency curves and a higher human-in-the-loop floor.
+
+## Walk-Back (May 2025)
+
+In May 2025, Klarna publicly reversed course and began rehiring human agents after customers complained about generic answers and the AI's inability to handle complicated, nuanced cases. The model occasionally gave confident-but-wrong answers about policy, fees, or payment terms. In fintech, incorrect answers about financial matters create compliance exposure beyond customer dissatisfaction. This reversal highlights the risks of over-reliance on AI agents in regulated domains with financial consequences.
+
+## Key Stakeholders
+
+- Customers (global consumer base, varying financial literacy and language)
+- Klarna customer service operations
+- Klarna compliance and legal teams
+- OpenAI (model provider and engineering partner)
+- Financial regulators (multiple jurisdictions)
+- Merchants (whose transactions and policies are referenced in support interactions)
