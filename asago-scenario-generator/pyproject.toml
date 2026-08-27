@@ -2,7 +2,8 @@
 name = "asago-scenario-generator-examples"
 version = "0.1.0"
 dependencies = [
-    "asago-scenario-generator @ git+https://github.com/asago-ai/asago-scenario-generator",
+    # Pin the merged STPA reliability contract from generator PR #34.
+    "asago-scenario-generator @ git+https://github.com/asago-ai/asago-scenario-generator@76a93f2a2b21db1da3c975c7491e3bb0f5f4a217",
     "ipywidgets>=8.0",
     "pandas>=2.0",
 ]

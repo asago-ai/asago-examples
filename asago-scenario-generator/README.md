@@ -25,15 +25,32 @@ export ASAGO_SCENARIO_GENERATOR_RUN_LIVE="1"
 uv run jupyter lab
 ```
 
+The validated configuration uses named profiles from an ignored local file so
+the endpoint and credentials never enter this repository:
+
+```bash
+export ASAGO_MODEL_PROFILE="gemma4-oc-taxonomy"
+export ASAGO_STPA_PROFILE="gemma4-oc"
+export ASAGO_MODEL_PROFILES_FILE="/absolute/path/to/config/model-profiles.yaml"
+```
+
 `taxonomy-risk-demo.ipynb` defaults to the reviewed one-ingress Klarna canary,
 coverage mode, one technique per scenario, and a one-scenario-per-pattern cap.
 This is the recommended live notebook check. `stpa-demo.ipynb` defaults to
 Klarna, two workers, bounded local numerical threads, and a fresh timestamped
 output directory for each full SP1→SP3 run.
 
-For STPA, direct endpoint variables are sufficient. To use a named model
-profile instead, also set `ASAGO_STPA_PROFILE` and
-`ASAGO_MODEL_PROFILES_FILE` to a populated, ignored profiles file.
+For STPA, a named model profile is recommended because it keeps the complete
+sampling configuration together. Named profile values take precedence over
+environment sampling values. Direct environment configuration is equivalent
+and supports `ASAGO_SCENARIO_GENERATOR_MAX_COMPLETION_TOKENS`,
+`ASAGO_SCENARIO_GENERATOR_TEMPERATURE`, `ASAGO_SCENARIO_GENERATOR_TOP_P`,
+`ASAGO_SCENARIO_GENERATOR_TOP_K`, and
+`ASAGO_SCENARIO_GENERATOR_USE_GUIDED_DECODING`.
+
+The STPA notebook emits a one-minute heartbeat while the synchronous pipeline
+call is running. Recoverable normalization or merge diagnostics are displayed
+as stage warnings; only `stage_errors` fail the notebook.
 
 ## Reproduce the validated exhaustive Klarna run
 
