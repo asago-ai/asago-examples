@@ -7,7 +7,7 @@ resolution-markers = [
 ]
 
 [options]
-exclude-newer = "2026-08-20T14:47:38.516586Z"
+exclude-newer = "2026-08-20T14:51:11.282041Z"
 exclude-newer-span = "P7D"
 
 [manifest]
@@ -379,7 +379,7 @@ requires-dist = [
 [[package]]
 name = "asago-scenario-generator"
 version = "0.1.0"
-source = { git = "https://github.com/asago-ai/asago-scenario-generator?rev=38156ca05364b0157031f2e339ee755e86a8edbf#38156ca05364b0157031f2e339ee755e86a8edbf" }
+source = { git = "https://github.com/asago-ai/asago-scenario-generator?rev=c6a7355c2a3f18342d484f2f62901962b5e3baef#c6a7355c2a3f18342d484f2f62901962b5e3baef" }
 dependencies = [
     { name = "jinja2" },
     { name = "jsonschema" },
@@ -401,7 +401,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "asago-scenario-generator", git = "https://github.com/asago-ai/asago-scenario-generator?rev=38156ca05364b0157031f2e339ee755e86a8edbf" },
+    { name = "asago-scenario-generator", git = "https://github.com/asago-ai/asago-scenario-generator?rev=c6a7355c2a3f18342d484f2f62901962b5e3baef" },
     { name = "ipywidgets", specifier = ">=8.0" },
     { name = "pandas", specifier = ">=2.0" },
 ]

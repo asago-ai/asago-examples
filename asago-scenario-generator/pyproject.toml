@@ -2,8 +2,8 @@
 name = "asago-scenario-generator-examples"
 version = "0.1.0"
 dependencies = [
-    # Temporarily pin generator PR #41 while the notebook fixes are validated.
-    "asago-scenario-generator @ git+https://github.com/asago-ai/asago-scenario-generator@38156ca05364b0157031f2e339ee755e86a8edbf",
+    # Pin the merged generator reliability contract from PR #41.
+    "asago-scenario-generator @ git+https://github.com/asago-ai/asago-scenario-generator@c6a7355c2a3f18342d484f2f62901962b5e3baef",
     "ipywidgets>=8.0",
     "pandas>=2.0",
 ]
