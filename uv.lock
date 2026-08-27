@@ -379,7 +379,7 @@ requires-dist = [
 [[package]]
 name = "asago-scenario-generator"
 version = "0.1.0"
-source = { git = "https://github.com/asago-ai/asago-scenario-generator?rev=6e93d518804aa0d386018c4373765372ba4cff7e#6e93d518804aa0d386018c4373765372ba4cff7e" }
+source = { git = "https://github.com/asago-ai/asago-scenario-generator?rev=debac3c8f8afed7714e64c4e8b17aa2b9a826dc2#debac3c8f8afed7714e64c4e8b17aa2b9a826dc2" }
 dependencies = [
     { name = "jinja2" },
     { name = "jsonschema" },
@@ -401,7 +401,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "asago-scenario-generator", git = "https://github.com/asago-ai/asago-scenario-generator?rev=6e93d518804aa0d386018c4373765372ba4cff7e" },
+    { name = "asago-scenario-generator", git = "https://github.com/asago-ai/asago-scenario-generator?rev=debac3c8f8afed7714e64c4e8b17aa2b9a826dc2" },
     { name = "ipywidgets", specifier = ">=8.0" },
     { name = "pandas", specifier = ">=2.0" },
 ]
