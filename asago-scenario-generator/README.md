@@ -21,9 +21,24 @@ Configure the endpoint before launching Jupyter:
 export ASAGO_SCENARIO_GENERATOR_MODEL_BASE_URL="https://your-endpoint.example/v1"
 export ASAGO_SCENARIO_GENERATOR_MODEL_NAME="gemma-4-26b-a4b-it"
 export ASAGO_SCENARIO_GENERATOR_API_KEY="none"
+export ASAGO_SCENARIO_GENERATOR_TIMEOUT="300"
 export ASAGO_SCENARIO_GENERATOR_RUN_LIVE="1"
 uv run jupyter lab
 ```
+
+When using vLLM with Gemma structured output, configure the serving runtime at
+startup with:
+
+```text
+--structured-outputs-config={"backend":"xgrammar","disable_any_whitespace":true}
+```
+
+Without this server-side setting, grammar-constrained responses can consume
+their completion budget as whitespace. The generator's default 300-second
+request deadline and explicit retry bounds prevent an unbounded application
+run, but they do not repair the serving configuration. The timeout can be
+overridden with the `timeout` profile field or
+`ASAGO_SCENARIO_GENERATOR_TIMEOUT`.
 
 The validated configuration uses named profiles from an ignored local file so
 the endpoint and credentials never enter this repository:
@@ -46,7 +61,9 @@ environment sampling values. Direct environment configuration is equivalent
 and supports `ASAGO_SCENARIO_GENERATOR_MAX_COMPLETION_TOKENS`,
 `ASAGO_SCENARIO_GENERATOR_TEMPERATURE`, `ASAGO_SCENARIO_GENERATOR_TOP_P`,
 `ASAGO_SCENARIO_GENERATOR_TOP_K`, and
-`ASAGO_SCENARIO_GENERATOR_USE_GUIDED_DECODING`.
+`ASAGO_SCENARIO_GENERATOR_USE_GUIDED_DECODING`. Request deadlines use the same
+precedence and can be configured with `timeout` or
+`ASAGO_SCENARIO_GENERATOR_TIMEOUT`.
 
 The STPA notebook emits a one-minute heartbeat while the synchronous pipeline
 call is running. Recoverable normalization or merge diagnostics are displayed
