@@ -17,6 +17,13 @@ scenario-generator = [
     "asago-scenario-generator-examples",
 ]
 
+[tool.uv]
+# asago-policy-mapper declares ai-atlas-nexus floating on @main; override it to the
+# release whose data schema the notebooks and example inputs are built against.
+override-dependencies = [
+    "ai-atlas-nexus @ git+https://github.com/IBM/ai-atlas-nexus.git@v1.2.3",
+]
+
 [tool.uv.workspace]
 members = ["asago-*"]
 

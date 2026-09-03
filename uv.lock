@@ -7,7 +7,7 @@ resolution-markers = [
 ]
 
 [options]
-exclude-newer = "2026-08-20T14:51:11.282041Z"
+exclude-newer = "2026-08-27T13:08:27.015681Z"
 exclude-newer-span = "P7D"
 
 [manifest]
@@ -17,6 +17,7 @@ members = [
     "asago-policy-mapper-examples",
     "asago-scenario-generator-examples",
 ]
+overrides = [{ name = "ai-atlas-nexus", git = "https://github.com/IBM/ai-atlas-nexus.git?rev=v1.2.3" }]
 
 [[package]]
 name = "absl-py"
@@ -48,7 +49,7 @@ wheels = [
 [[package]]
 name = "ai-atlas-nexus"
 version = "1.2.3"
-source = { git = "https://github.com/IBM/ai-atlas-nexus.git?rev=main#a8af9d79b72fe12c165bd51f855bc888d9acaeb4" }
+source = { git = "https://github.com/IBM/ai-atlas-nexus.git?rev=v1.2.3#056b942a8359702a1c89b335f0669af07ad8961f" }
 dependencies = [
     { name = "chardet" },
     { name = "cymple" },
