@@ -2,6 +2,7 @@
 name = "asago-artifact-generator-examples"
 version = "0.1.0"
 dependencies = [
-    "asago-artifact-generator @ git+https://github.com/asago-ai/artifact-generator",
+    # Validation/retry contract used by the end-to-end demo.
+    "asago-artifact-generator @ git+https://github.com/asago-ai/artifact-generator@a7c586b7480ae8090019079c557e7c4842dd12f9",
     "ipywidgets>=8.0",
 ]

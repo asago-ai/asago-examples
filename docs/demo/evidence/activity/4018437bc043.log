@@ -1,0 +1,12 @@
+[12:57:49 UTC] [artifact] Execution started
+[12:57:49 UTC] [artifact] Stage started
+[12:57:49 UTC] [artifact] Model (artifact): google · gemini-3.1-flash-lite
+[12:57:50 UTC] [artifact] [Stage Artifact] Generating and validating scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e with gemini-3.1-flash-lite.
+[12:57:50 UTC] [artifact] Classified scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e injection_surface=tool_return coverage=partial
+[12:57:50 UTC] [artifact] Generating scenario artifact with [local-home]/Documents/ASAGO/asago-artifact-generator/src/asago_artifact_generator/garak/prompts/generate_artifact.md (injection_surface=tool_return, max_attempts=3)
+[12:57:50 UTC] [artifact] LLM provider=openai model=gemini-3.1-flash-lite base_url=https://generativelanguage.googleapis.com/v1beta/openai
+[12:57:59 UTC] [artifact] Wrote garak artifact: [local-home]/Documents/ASAGO/asago-artifact-generator/demo/runs/20261002-051105-8997dc/artifacts/scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e/scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e-garak.json
+[12:57:59 UTC] [artifact] DONE scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e → scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e-garak.json
+[12:57:59 UTC] [artifact] Coverage: partial; validation: passed.
+[12:58:00 UTC] [artifact] Stage completed in 10.5s
+[12:58:00 UTC] [artifact] Execution completed

@@ -1,0 +1,81 @@
+[12:54:41 UTC] [scenarios] Execution started
+[12:54:41 UTC] [scenarios] Stage started
+[12:54:41 UTC] [scenarios] Model (scenario): google · gemini-3.1-flash-lite
+[12:54:41 UTC] [scenarios] Generation options: {"scenario_scope": "indirect", "scenario_profile": "indirect", "generation_mode": "exhaustive", "max_scenarios_per_pattern": 3}
+[12:54:41 UTC] [scenarios] Timeout: 120s per request; retries may add time.
+[12:54:42 UTC] [scenarios] [Stage Demo scope] Checking only 7 attack patterns: AP-T6-01, AP-T6-02, AP-T6-03, AP-T6-04, AP-T6-05, AP-T6-06, AP-T6-07. Qualification and validation stay enabled.
+[12:54:42 UTC] [scenarios] Generating Klarna scenarios from this run's saved FS-ISAC extraction.
+[12:54:42 UTC] [scenarios] Scenario configuration: {"scenario_scope": "indirect", "scenario_profile": "indirect", "generation_mode": "exhaustive", "max_scenarios_per_pattern": 3}; one technique per scenario.
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run] Run ID: 20261002T125442_64ba8a15650ced34da58e484f4728080
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run] Run directory: [local-home]/Documents/ASAGO/asago-artifact-generator/demo/runs/20261002-051105-8997dc/scenario-generation/20261002T125442_64ba8a15650ced34da58e484f4728080
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run] [Stage 1] Loading capability profile from [local-home]/Documents/ASAGO/asago-artifact-generator/demo/vendor/asago-examples/asago-scenario-generator/inputs/profiles/klarna-indirect-demo-profile.yaml
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run]   Zones active: ['input', 'memory', 'reasoning', 'tool_execution']
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run]   Entry points: 1
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run]   Confidence: high
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run]   Written to [local-home]/Documents/ASAGO/asago-artifact-generator/demo/runs/20261002-051105-8997dc/scenario-generation/20261002T125442_64ba8a15650ced34da58e484f4728080/capability-profile.yaml
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run] [Stage 2] Determining threat surface...
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.data.validation] Causal chain coherence check: all 20 risk cards appear coherent with the use case.
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.data.threat_gating] Loaded 49 attack patterns across 15 threats for data-driven gating
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.data.threat_gating] Gating PASSED AP-T6-06: prerequisite_capabilities satisfied
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.data.threat_gating] Gating PASSED AP-T6-07: prerequisite_capabilities satisfied
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.data.threat_gating] Gating PASSED AP-T6-01: prerequisite_capabilities satisfied
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.data.threat_gating] Gating PASSED AP-T6-02: prerequisite_capabilities satisfied
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.data.threat_gating] Gating PASSED AP-T6-03: prerequisite_capabilities satisfied
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.data.threat_gating] Gating PASSED AP-T6-04: prerequisite_capabilities satisfied
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.data.threat_gating] Gating PASSED AP-T6-05: prerequisite_capabilities satisfied
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.data.threat_gating] Threat T6 (Intent Breaking & Goal Manipulation) IN SCOPE: enabled by KC sub-codes: ['KC1.1', 'KC2.1', 'KC3.3', 'KC4.3', 'KC5.3'] — 7/7 attack patterns kept
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run]   1 actionable risk cards
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run]   19 governance-only
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run]   1 in-scope threats
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run]   Written to [local-home]/Documents/ASAGO/asago-artifact-generator/demo/runs/20261002-051105-8997dc/scenario-generation/20261002T125442_64ba8a15650ced34da58e484f4728080/threat-surface.yaml
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run] [Stage 3] Expanding scenario seeds...
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run]   7 scenario seeds to generate
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run] [Stage 3.5] Expanding and filtering candidates...
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 WARNING  [asago_scenario_generator.pipeline.candidates] Seed AP-T6-06 has no technique IDs (ATLAS or LAAF) — skipping
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 WARNING  [asago_scenario_generator.pipeline.candidates] Seed AP-T6-07 has no technique IDs (ATLAS or LAAF) — skipping
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.candidates] 7 seeds x 1 ingress entry points x avg 2.0 techniques (max_techniques=1) = 10 candidates
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.candidates] Rule pre-filter: 7/10 candidates rejected, 3 passed to LLM filter
+[12:54:43 UTC] [scenarios] 2026-10-02T05:54:43 INFO     [asago_scenario_generator.pipeline.runner_run]   Rule pre-filter: 7/10 candidates rejected, 3 passed to LLM
+[12:54:45 UTC] [scenarios] 2026-10-02T05:54:45 INFO     [asago_scenario_generator.pipeline.candidates] Seed AP-T6-03: 1/1 candidates accepted
+[12:54:49 UTC] [scenarios] 2026-10-02T05:54:49 INFO     [asago_scenario_generator.pipeline.candidates] Seed AP-T6-05: 1/1 candidates accepted
+[12:54:56 UTC] [scenarios] 2026-10-02T05:54:56 INFO     [asago_scenario_generator.pipeline.candidates] Seed AP-T6-04: 1/1 candidates accepted
+[12:54:56 UTC] [scenarios] 2026-10-02T05:54:56 INFO     [asago_scenario_generator.pipeline.candidates] Filter: 3/3 candidates survived (0 rejected)
+[12:54:56 UTC] [scenarios] 2026-10-02T05:54:56 INFO     [asago_scenario_generator.pipeline.runner_run]   10 candidates -> 7 rule-rejected, 0 LLM-filtered -> 3 accepted
+[12:54:56 UTC] [scenarios] 2026-10-02T05:54:56 INFO     [asago_scenario_generator.pipeline.runner_run] [Stage 3.6] Projecting authoritative candidates...
+[12:54:56 UTC] [scenarios] 2026-10-02T05:54:56 INFO     [asago_scenario_generator.pipeline.coverage_planning_universe] Coverage universe: 1 feasible target(s), 0 excluded, completeness=not_applicable
+[12:54:57 UTC] [scenarios] 2026-10-02T05:54:57 INFO     [asago_scenario_generator.pipeline.runner_run]   Projected 30 candidates (47 infeasible, 0 limited)
+[12:54:57 UTC] [scenarios] 2026-10-02T05:54:57 INFO     [asago_scenario_generator.pipeline.runner_run]   2 filtered seed(s) rejected at projection stage (no exact ingress match).
+[12:54:57 UTC] [scenarios] 2026-10-02T05:54:57 INFO     [asago_scenario_generator.pipeline.coverage_planning] Qualified 18 candidate(s) from 3 filtered seed(s) (18 unique projected IDs).
+[12:54:57 UTC] [scenarios] 2026-10-02T05:54:57 INFO     [asago_scenario_generator.pipeline.runner_run]   Exhaustive generation planning: 15 candidates capped by the per-pattern limit.
+[12:54:57 UTC] [scenarios] 2026-10-02T05:54:57 INFO     [asago_scenario_generator.pipeline.runner_run]   Selected 3 candidate(s) from 18 qualified (2 projection-rejected).
+[12:56:00 UTC] [scenarios] 2026-10-02T05:56:00 WARNING  [asago_scenario_generator.pipeline.coverage] Coverage gap: 3 active zone(s) with zero scenarios: ['input', 'memory', 'tool_execution']
+[12:56:00 UTC] [scenarios] 2026-10-02T05:56:00 WARNING  [asago_scenario_generator.pipeline.coverage] Coverage gap: 6 attack pattern(s) with zero scenarios: ['AP-T6-01', 'AP-T6-02', 'AP-T6-04', 'AP-T6-05', 'AP-T6-06', 'AP-T6-07']
+[12:56:00 UTC] [scenarios] 2026-10-02T05:56:00 WARNING  [asago_scenario_generator.pipeline.coverage] Actor profile diversity: 100% of scenarios use 'supply-chain-actor' (threshold: 80%). Consider varying threat actor types.
+[12:56:00 UTC] [scenarios] 2026-10-02T05:56:00 INFO     [asago_scenario_generator.pipeline.coverage] Coverage report written to [local-home]/Documents/ASAGO/asago-artifact-generator/demo/runs/20261002-051105-8997dc/scenario-generation/20261002T125442_64ba8a15650ced34da58e484f4728080/coverage-gaps.json
+[12:56:01 UTC] [scenarios] 2026-10-02T05:56:01 INFO     [asago_scenario_generator.report.data] Loaded capability profile from manifest inventory
+[12:56:01 UTC] [scenarios] 2026-10-02T05:56:01 INFO     [asago_scenario_generator.report.data] Loaded threat surface from manifest inventory
+[12:56:01 UTC] [scenarios] 2026-10-02T05:56:01 INFO     [asago_scenario_generator.report.data] Loaded scenario scenario:v2:6c0acbc3f024383f6fcf3722c1786534bfdae43cfb373776a27b66cd1afde164.yaml
+[12:56:01 UTC] [scenarios] 2026-10-02T05:56:01 INFO     [asago_scenario_generator.report.data] Loaded scenario scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e.yaml
+[12:56:01 UTC] [scenarios] 2026-10-02T05:56:01 INFO     [asago_scenario_generator.report.data] Loaded scenario scenario:v2:97e7e7ba45beb7212c97374d7b81ff3b8fdb25e9a36d0c23495ce9323111cc8d.yaml
+[12:56:01 UTC] [scenarios] 2026-10-02T05:56:01 INFO     [asago_scenario_generator.report.data] Loaded 3 scenarios, 3 feature files
+[12:56:01 UTC] [scenarios] 2026-10-02T05:56:01 INFO     [asago_scenario_generator.report.data] Loaded 18 pipeline call log entries from manifest inventory
+[12:56:01 UTC] [scenarios] 2026-10-02T05:56:01 INFO     [asago_scenario_generator.report.data] Loaded coverage gaps from manifest inventory
+[12:56:01 UTC] [scenarios] 2026-10-02T05:56:01 INFO     [asago_scenario_generator.report.data] Loaded eval scorecard from manifest inventory
+[12:56:01 UTC] [scenarios] 2026-10-02T05:56:01 INFO     [asago_scenario_generator.report.data] Loaded run manifest from resolver
+[12:56:01 UTC] [scenarios] 2026-10-02T05:56:01 INFO     [asago_scenario_generator.report.data] Loaded use case description from manifest inventory
+[12:56:01 UTC] [scenarios] 2026-10-02T05:56:01 INFO     [asago_scenario_generator.report.generator] Report written to [local-home]/Documents/ASAGO/asago-artifact-generator/demo/runs/20261002-051105-8997dc/scenario-generation/20261002T125442_64ba8a15650ced34da58e484f4728080/report.html (3189876 bytes)
+[12:56:02 UTC] [scenarios] 2026-10-02T05:56:02 INFO     [asago_scenario_generator.report.data] Loaded capability profile from manifest inventory
+[12:56:02 UTC] [scenarios] 2026-10-02T05:56:02 INFO     [asago_scenario_generator.report.data] Loaded threat surface from manifest inventory
+[12:56:02 UTC] [scenarios] 2026-10-02T05:56:02 INFO     [asago_scenario_generator.report.data] Loaded scenario scenario:v2:6c0acbc3f024383f6fcf3722c1786534bfdae43cfb373776a27b66cd1afde164.yaml
+[12:56:02 UTC] [scenarios] 2026-10-02T05:56:02 INFO     [asago_scenario_generator.report.data] Loaded scenario scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e.yaml
+[12:56:02 UTC] [scenarios] 2026-10-02T05:56:02 INFO     [asago_scenario_generator.report.data] Loaded scenario scenario:v2:97e7e7ba45beb7212c97374d7b81ff3b8fdb25e9a36d0c23495ce9323111cc8d.yaml
+[12:56:02 UTC] [scenarios] 2026-10-02T05:56:02 INFO     [asago_scenario_generator.report.data] Loaded 3 scenarios, 3 feature files
+[12:56:02 UTC] [scenarios] 2026-10-02T05:56:02 INFO     [asago_scenario_generator.report.data] Loaded 18 pipeline call log entries from manifest inventory
+[12:56:02 UTC] [scenarios] 2026-10-02T05:56:02 INFO     [asago_scenario_generator.report.data] Loaded coverage gaps from manifest inventory
+[12:56:02 UTC] [scenarios] 2026-10-02T05:56:02 INFO     [asago_scenario_generator.report.data] Loaded eval scorecard from manifest inventory
+[12:56:02 UTC] [scenarios] 2026-10-02T05:56:02 INFO     [asago_scenario_generator.report.data] Loaded run manifest from resolver
+[12:56:02 UTC] [scenarios] 2026-10-02T05:56:02 INFO     [asago_scenario_generator.report.data] Loaded use case description from manifest inventory
+[12:56:02 UTC] [scenarios] 2026-10-02T05:56:02 INFO     [asago_scenario_generator.report.generator] Report written to [local-home]/Documents/ASAGO/asago-artifact-generator/demo/runs/20261002-051105-8997dc/scenario-generation/20261002T125442_64ba8a15650ced34da58e484f4728080/report.html (3189443 bytes)
+[12:56:02 UTC] [scenarios] Scenarios: 3 admitted, 0 rejected.
+[12:56:02 UTC] [scenarios] Stage completed in 80.8s
+[12:56:02 UTC] [scenarios] Execution completed

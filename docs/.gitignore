@@ -1,0 +1,2 @@
+# Only logs in this deliberately published snapshot are versioned.
+!*.log

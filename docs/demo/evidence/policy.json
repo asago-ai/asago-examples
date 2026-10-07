@@ -1,0 +1,1326 @@
+{
+  "status": "completed",
+  "source": "saved",
+  "policy": "FS-ISAC generative AI policy",
+  "report": "policy/report.html",
+  "extraction": "policy/risk-extraction.json",
+  "count": 49,
+  "taxonomies": [
+    "ai-risk-taxonomy",
+    "credo-ucf",
+    "ibm-risk-atlas",
+    "mit-ai-risk-repository"
+  ],
+  "risks": [
+    {
+      "risk_id": "atlas-generated-content-ownership",
+      "risk_name": "Generated content ownership and IP",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Invalidate some uses of the output for proprietary or copyrighted work",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 11,
+          "section": "Representation as the Employee or Company",
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Open users to copyright violations",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 11,
+          "section": "Representation as the Employee or Company",
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Consumers of these systems cannot (typically) treat the output as their proprietary IP",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 11,
+          "section": "Representation as the Employee or Company",
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-026",
+      "risk_name": "Fraud, scams, and targeted manipulation",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "generative AI has the power to increase cyber crime through convincing mimicking of existing communications, excellent translation capabilities, deep fake images, audio, and video",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 7,
+          "section": "Responsibility",
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "phishing emails may become more personalized with generative AI",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 7,
+          "section": "Responsibility",
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Employees can use these systems for nefarious purposes, such as ... manipulating financial services transactions for personal gain",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 10,
+          "section": "Accuracy",
+          "chunk_index": 11,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-hallucination",
+      "risk_name": "Hallucination",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "These systems may 'hallucinate' when their answers appear convincing but are completely wrong.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 10,
+          "section": "Accuracy",
+          "chunk_index": 11,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Given that the accuracy of generative AI is imperfect, the firm strongly encourages employees to manually verify the output before use.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 10,
+          "section": "Accuracy",
+          "chunk_index": 11,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "the accuracy of these systems is still suspect; they have been known to 'hallucinate'",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 7,
+          "section": "Responsibility",
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-036",
+      "risk_name": "Compromised personally identifiable information (Slattery et al., 2024)",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Limiting or obfuscating the data if it has Personally Identifiable Informa -tion (PII)",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Confidentiality",
+          "chunk_index": 5,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Remove any references to IP , NPI, PII",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Confidentiality",
+          "chunk_index": 5,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Limiting or obfuscating the data if it has Personally Identifiable Information (PII)",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 7,
+          "section": "Responsibility",
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-037",
+      "risk_name": "Compromised sensitive information (Slattery et al., 2024; IBM, 2024; AI, 2023)",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Queries with sensitive data put companies at significant risk.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Confidentiality",
+          "chunk_index": 5,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Remove any references to IP , NPI, PII",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Confidentiality",
+          "chunk_index": 5,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Limiting or obfuscating the data if it has Personally Identifiable Informa -tion (PII), Nonpublic Personal Information (NPI), or other data under the purview of reg -ulators or similar entities",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 6,
+          "section": "Confidentiality",
+          "chunk_index": 6,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-010",
+      "risk_name": "Stereotype perpetuation (Slattery et al., 2024; IBM, 2024)",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Employees must check that the output does not lead to: > Poor, biased, and/or unethical business practices or decisions",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 10,
+          "section": "Accuracy",
+          "chunk_index": 11,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Poor, biased, and/or unethical business practices or decisions",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 11,
+          "section": "Representation as the Employee or Company",
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "ai-risk-taxonomy-unauthorized-disclosure---pii-(personal-identifiable-information)",
+      "risk_name": "Unauthorized disclosure - PII (Personal Identifiable Information)",
+      "taxonomy": "ai-risk-taxonomy",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Limiting or obfuscating the data if it has Personally Identifiable Informa -tion (PII)",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 4,
+          "section": "Defining External Generative AI",
+          "chunk_index": 3,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Any data having Personally Identifiable references",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 4,
+          "section": "Defining External Generative AI",
+          "chunk_index": 3,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Any data having Personally Identifiable",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Confidentiality",
+          "chunk_index": 5,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "ai-risk-taxonomy-unauthorized-disclosure---financial-records",
+      "risk_name": "Unauthorized disclosure - Financial records",
+      "taxonomy": "ai-risk-taxonomy",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Customers trust financial institutions with their financial data and transactions.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 4,
+          "section": "Defining External Generative AI",
+          "chunk_index": 3,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-personal-information-in-data",
+      "risk_name": "Personal information in data",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Currently, most external generative AI systems use queries for future training (although some systems allow opt-outs).",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Confidentiality",
+          "chunk_index": 5,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Limiting or obfuscating the data if it has Personally Identifiable Informa -tion (PII), Nonpublic Personal Information (NPI), or other data under the purview of reg -ulators or similar entities",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 4,
+          "section": "Defining External Generative AI",
+          "chunk_index": 3,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-021",
+      "risk_name": "False or misleading information",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Distortion of statistics or other facts may lead to employees making public claims or key decisions based on erroneous information.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 10,
+          "section": "Accuracy",
+          "chunk_index": 11,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Inaccurate instructions for IT administrators may lead to data loss or other system damage.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 10,
+          "section": "Accuracy",
+          "chunk_index": 11,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Generative AI systems are far from perfect, especially with fact-based output.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 9,
+          "section": "Accuracy",
+          "chunk_index": 10,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-016",
+      "risk_name": "Over or under-reliance and unsafe use (Slattery et al., 2024; IBM, 2024; AI, 2023)",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Users should not rely on their accuracy.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 9,
+          "section": "Monitoring",
+          "chunk_index": 9,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Incorrect answers can cause severe issues for companies.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 9,
+          "section": "Monitoring",
+          "chunk_index": 9,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Distortion of statistics or other facts may lead to employees making public claims or key decisions based on erroneous information.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 9,
+          "section": "Monitoring",
+          "chunk_index": 9,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-exposing-personal-information",
+      "risk_name": "Exposing personal information",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "The service may preserve the queries, which hackers could breach and release.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Confidentiality",
+          "chunk_index": 5,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Queries with sensitive data put companies at significant risk.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Confidentiality",
+          "chunk_index": 5,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Remove references to IP , NPI, PII",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 8,
+          "section": "Responsibility",
+          "chunk_index": 8,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "mit-ai-risk-subdomain-2.1",
+      "risk_name": "Compromise of privacy by obtaining, leaking or correctly inferring sensitive information",
+      "taxonomy": "mit-ai-risk-repository",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Currently, most external generative AI systems use queries for future training (although some systems allow opt-outs). The service may preserve the queries, which hackers could breach and release. Queries with sensitive data put companies at significant risk.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 4,
+          "section": "Introduction",
+          "chunk_index": 2,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Limiting or obfuscating the data if it has Personally Identifiable Information (PII), Nonpublic Personal Information (NPI), or other data under the purview of regulators or similar entities",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 3,
+          "section": "Introduction",
+          "chunk_index": 1,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "The service may preserve the queries, which hackers could breach and release.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 7,
+          "section": "Responsibility",
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-025",
+      "risk_name": "Corporate liability (IBM, 2024)",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Any information that if exposed pub -licly might tarnish the reputation of the company, or information that would open the company to regulatory or legal action",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 9,
+          "section": "Monitoring",
+          "chunk_index": 9,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Incorrect answers can cause severe issues for companies.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 9,
+          "section": "Monitoring",
+          "chunk_index": 9,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Could open the company to regulatory or legal action",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 7,
+          "section": "Responsibility",
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-prompt-priming",
+      "risk_name": "Prompt priming",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "employees need to take care of the queries and inputs to these systems.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 8,
+          "section": "Responsibility",
+          "chunk_index": 8,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "To use them responsibly, at a minimum, employ - ees must genericize the queries or inputs",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 8,
+          "section": "Responsibility",
+          "chunk_index": 8,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-nonconsensual-use",
+      "risk_name": "Nonconsensual use",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Other multimedia creation tools (e.g., 'deepfake' tools)",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Policy Guidance",
+          "chunk_index": 4,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "generative AI has the power to increase cyber crime through convincing mimicking of existing communications, excellent translation capabilities, deep fake images, audio, and video",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 7,
+          "section": "Responsibility",
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "ai-risk-taxonomy-unauthorized-processing---pii-(personal-identifiable-information)",
+      "risk_name": "Unauthorized processing - PII (Personal Identifiable Information)",
+      "taxonomy": "ai-risk-taxonomy",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Remove references to IP , NPI, PII",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 9,
+          "section": "Monitoring",
+          "chunk_index": 9,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "ai-risk-taxonomy-unauthorized-processing---financial-records",
+      "risk_name": "Unauthorized processing - Financial records",
+      "taxonomy": "ai-risk-taxonomy",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "manipulating financial services transactions for personal gain",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 9,
+          "section": "Monitoring",
+          "chunk_index": 9,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "ai-risk-taxonomy-unauthorized-distribution---pii-(personal-identifiable-information)",
+      "risk_name": "Unauthorized distribution - PII (Personal Identifiable Information)",
+      "taxonomy": "ai-risk-taxonomy",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Remove references to IP , NPI, PII",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 9,
+          "section": "Monitoring",
+          "chunk_index": 9,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Remove any references to IP , NPI, PII",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 9,
+          "section": "Monitoring",
+          "chunk_index": 9,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "mit-ai-risk-subdomain-5.1",
+      "risk_name": "Overreliance and unsafe use",
+      "taxonomy": "mit-ai-risk-repository",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Users should not rely on their accuracy.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 9,
+          "section": "Monitoring",
+          "chunk_index": 9,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-personal-information-in-prompt",
+      "risk_name": "Personal information in prompt",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "employees need to take care of the queries and inputs to these systems.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 7,
+          "section": "Responsibility",
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Remove any references to IP , NPI, PII",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 7,
+          "section": "Responsibility",
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "employees need to take care of the queries and inputs to these systems",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 8,
+          "section": "Responsibility",
+          "chunk_index": 8,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-copyright-infringement",
+      "risk_name": "Copyright infringement",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Ensure compliance with the terms of use of many generative AI systems (especially attribution and lack of copyright protection)",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Policy Guidance",
+          "chunk_index": 4,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-revealing-confidential-information",
+      "risk_name": "Revealing confidential information",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Currently, most external generative AI systems use queries for future training (although some systems allow opt-outs). The service may preserve the queries, which hackers could breach and release. Queries with sensitive data put companies at significant risk.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 7,
+          "section": "Responsibility",
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Employees must respect the confidentiality of the company's work products above any uses of generative AI systems.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 7,
+          "section": "Responsibility",
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "The impact, importance, or uniqueness of the company's intellectual property (IP) before sharing it.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 7,
+          "section": "Responsibility",
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-024",
+      "risk_name": "Civil liability",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "That employee does not like their appraisal and files a complaint. Since an actual human did not write the appraisal, there is good reason to believe that the employee's grievances would be upheld.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 11,
+          "section": "Representation as the Employee or Company",
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Reputational and/or financial harm of the company",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 12,
+          "section": "Attribution",
+          "chunk_index": 13,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Open users to conflicts with other firms potentially using the same or similar output",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 12,
+          "section": "Attribution",
+          "chunk_index": 13,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-ip-information-in-prompt",
+      "risk_name": "IP information in prompt",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "The impact, importance, or uniqueness of the company's intellectual property (IP) before sharing it.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Confidentiality",
+          "chunk_index": 5,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Remove any references to IP , NPI, PII",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Confidentiality",
+          "chunk_index": 5,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "remove any reference to the company or its IP",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Confidentiality",
+          "chunk_index": 5,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "mit-ai-risk-subdomain-3.1",
+      "risk_name": "False or misleading information",
+      "taxonomy": "mit-ai-risk-repository",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Distortion of statistics or other facts may lead to employees making public claims or key decisions based on erroneous information.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 10,
+          "section": "Accuracy",
+          "chunk_index": 11,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "mit-ai-risk-subdomain-4.3",
+      "risk_name": "Fraud, scams, and targeted manipulation",
+      "taxonomy": "mit-ai-risk-repository",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Employees can use these systems for nefarious purposes, such as proxy avoidance, unapproved network uses, or manipulating financial services transactions for personal gain",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 10,
+          "section": "Accuracy",
+          "chunk_index": 11,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-023",
+      "risk_name": "Regulatory compliance",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Ensure compliance with applicable regulations, laws, and acceptable fair use of others' copyright protections",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 11,
+          "section": "Representation as the Employee or Company",
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Employees must also: > Ensure compliance with applicable reg - ulations, laws, and acceptable fair use of others' copyright protections.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 12,
+          "section": "Attribution",
+          "chunk_index": 13,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Employees must note that there is greater attribution, legal, ethical, and copyright concerns in external com - munications",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 12,
+          "section": "Attribution",
+          "chunk_index": 13,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-non-disclosure",
+      "risk_name": "Non-disclosure",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "External generative AI systems often require users to give attribution to the system for any output, for example, in the Open AI's Terms of Use.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 11,
+          "section": "Representation as the Employee or Company",
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "mit-ai-risk-subdomain-2.2",
+      "risk_name": "AI system security vulnerabilities and attacks",
+      "taxonomy": "mit-ai-risk-repository",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "The service may preserve the queries, which hackers could breach and release.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Confidentiality",
+          "chunk_index": 5,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-dangerous-use",
+      "risk_name": "Dangerous use",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Employees can use these systems for nefarious purposes, such as proxy avoidance, unapproved network uses, or manipulating financial services transactions for personal gain",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 10,
+          "section": "Accuracy",
+          "chunk_index": 11,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Employees can use these systems for nefarious purposes",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 9,
+          "section": "Accuracy",
+          "chunk_index": 10,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Although generative AI has the power to increase cyber crime through convincing mimicking of existing communications, excellent translation capabilities, deep fake images, audio, and video, ease of finding code vulnerabilities, and much more",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Confidentiality",
+          "chunk_index": 5,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-data-usage",
+      "risk_name": "Data usage restrictions",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Ensure compliance with all applicable laws, rules, and regulations, including privacy requirements such as General Data Protection Regulation (GDPR)",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Policy Guidance",
+          "chunk_index": 4,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-038",
+      "risk_name": "Compromised confidential information (Slattery et al., 2024; IBM, 2024;AI, 2023)",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "The service may preserve the queries, which hackers could breach and release.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 5,
+          "section": "Policy Guidance",
+          "chunk_index": 4,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Employees must take care to remove sensitive, proprietary, or confidential/secret company infor - mation.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 10,
+          "section": "Accuracy",
+          "chunk_index": 11,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-048",
+      "risk_name": "Upstream third-party dependencies (AI, 2023)",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "The policy assumes as an overarching principle that data loss risks are present in the use of generative AI systems, like any other third-party system.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": 4,
+          "section": "Defining External Generative AI",
+          "chunk_index": 3,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-output-bias",
+      "risk_name": "Output bias",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Poor, biased, and/or unethical busi - ness practices or decisions",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 11,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "mit-ai-risk-subdomain-1.1",
+      "risk_name": "Unfair discrimination and misrepresentation",
+      "taxonomy": "mit-ai-risk-repository",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Poor, biased, and/or unethical busi - ness practices or decisions",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 11,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-034",
+      "risk_name": " Oversight and evaluation challenges",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "While there are tools that try to detect if a generative AI system developed a specific output, they are not  (yet)  dependable  enough  to  find  whether  an  employee's  work  is  original  or  not.  This document assumes you cannot use such tools, but that may change.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 13,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "mit-ai-risk-subdomain-7.3",
+      "risk_name": "Lack of capability or robustness",
+      "taxonomy": "mit-ai-risk-repository",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Since an actual human did not write the appraisal. That employee does not like their appraisal and files a complaint. Since an actual human did not write the appraisal, there is good reason to believe that the employee's grievances would be upheld.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 4,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-model-usage-rights",
+      "risk_name": "Model usage rights restrictions",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "External generative AI systems often require users to give attribution to the system for any output, for example, in the Open AI's Terms of Use.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Several commercial generative AI tools require attribution in their Terms of Use. Given that users often do not attribute output to AI, firms may be liable for violations of these terms.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 13,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Any output from generative AI systems must follow the policies of the various external systems, specifically where they require supplying attribution to those systems.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 13,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-039",
+      "risk_name": "AI model and intellectual property theft",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Invalidate some uses of the output for proprietary or copyrighted work",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Open users to copyright violations",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Consumers of these systems cannot (typically) treat the output as their proprietary IP , so use of this output can only advise and guide users.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 13,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-029",
+      "risk_name": "Mass surveillance and privacy attacks (Slattery et al., 2024)",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "The company has the right to monitor the use of these systems per applicable laws and regulations. Management may occasionally verify that the use of these systems adheres to the directives outlined in this document.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 9,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "The company will monitor the use of these systems per applicable laws and regula - tions. Managementwill ensure that the use of these systems adheres to the directives outlined in this document.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 9,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-027",
+      "risk_name": "Cyberattacks, weapon development, and mass harm (AI, 2023; IBM, 2024)",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Although generative AI has the power to increase cyber crime through convincing mimicking of  existing  communications, excellent translation capabilities,  deep fake images, audio, and video, ease of finding code vulnerabilities, and much more, the kinds of threats still are the same as  when  using  other  third-party  systems.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-spreading-disinformation",
+      "risk_name": "Spreading disinformation",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Although generative AI has the power to increase cyber crime through convincing mimicking of  existing  communications, excellent translation capabilities,  deep fake images, audio, and video, ease of finding code vulnerabilities, and much more, the kinds of threats still are the same as  when  using  other  third-party  systems.  For  instance,  phishing  emails  may  become  more personalized with generative AI, but the way these enter the organization still is the same.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-data-privacy-rights",
+      "risk_name": "Data privacy rights alignment",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Ensure compliance with all applicable laws, rules, and regulations, including privacy requirements such as General Data Protection Regulation (GDPR)",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 2,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "mit-ai-risk-subdomain-6.3",
+      "risk_name": "Economic and cultural devaluation of human effort",
+      "taxonomy": "mit-ai-risk-repository",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Since an actual human did not write the appraisal, there is good reason to believe that the employee's grievances would be upheld.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Employees must not use the output of gen - erative AI systems to stand for activity they undertook.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Consumers of these systems cannot (typically) treat the output as their proprietary IP , so use of this output can only advise and guide users.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 13,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-over-or-under-reliance",
+      "risk_name": "Over- or under-reliance",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Generative AI systems are far from perfect, especially with fact-based output. These systems may 'hallucinate' when their answers appear convincing but are completely wrong. Users should not rely on their accuracy.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 10,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Given that the accuracy of generative AI is imperfect, the firm strongly encourages employees to manually verify the output before use.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 11,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Employees must assume the output accuracy of generative AI systems are imperfect, and therefore must manually check the accuracy of the output (especially with regards to fact-based queries).",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 1,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "credo-risk-017",
+      "risk_name": "Inadequate AI literacy and communication",
+      "taxonomy": "credo-ucf",
+      "grounding_confidence": "medium",
+      "evidence": [
+        {
+          "text": "Others believe that employees may find workarounds to blocking these systems, and so it would be more produc -tive and indeed, more secure, to educate employees on how to safely use them.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 1,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-confidential-data-in-prompt",
+      "risk_name": "Confidential data in prompt",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "They can do harm too, so employees need to take care of the queries and inputs to these systems.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "To use them responsibly, at a minimum, employ - ees must genericize the queries or inputs and remove any reference to the com - pany or its IP , akin to asking a question on communities such as Stack Overflow or Discord.",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Remove references to IP , NPI, PII",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 7,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    },
+    {
+      "risk_id": "atlas-data-usage-rights",
+      "risk_name": "Data usage rights restrictions",
+      "taxonomy": "ibm-risk-atlas",
+      "grounding_confidence": "high",
+      "evidence": [
+        {
+          "text": "Ensure compliance with the terms of use of many generative AI systems (especially attribution and lack of copyright protection)",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 2,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "External generative AI systems often require users to give attribution to the system for any output, for example, in the Open AI's Terms of Use. Knowing this stipulation, it could:\n- > Invalidate some uses of the output for proprietary or copyrighted work\n- > Open users to copyright violations\n- > Open users to conflicts with other firms potentially using the same or similar output",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        },
+        {
+          "text": "Employees must note that there is greater attribution, legal, ethical, and copyright concerns in external com - munications and perform stronger reviews in those uses",
+          "document": "[local-home]/workspace/redhat/project-concorde/concorde-policy-mapper/policy_examples/fs-isac.pdf",
+          "page": null,
+          "section": null,
+          "chunk_index": 12,
+          "sentence_index": 0,
+          "cross_encoder_score": 0.0
+        }
+      ]
+    }
+  ]
+}

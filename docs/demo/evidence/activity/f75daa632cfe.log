@@ -1,0 +1,6 @@
+[05:11:05 UTC] [policy] Execution started
+[05:11:05 UTC] [policy] Stage started
+[05:11:05 UTC] [policy] [Stage Policy] Loading saved FS-ISAC extraction. No policy model calls.
+[05:11:06 UTC] [policy] [Stage Policy report] Ready: 49 matched taxonomy entries.
+[05:11:06 UTC] [policy] Stage completed in 0.2s
+[05:11:06 UTC] [policy] Execution completed

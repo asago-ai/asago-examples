@@ -1,0 +1,4 @@
+# Keep the reviewed source changes prominent beside the generated static export.
+docs/demo/** linguist-generated=true
+# Preserve formatting in archived evidence instead of rewriting model/report output.
+docs/demo/evidence/** -whitespace

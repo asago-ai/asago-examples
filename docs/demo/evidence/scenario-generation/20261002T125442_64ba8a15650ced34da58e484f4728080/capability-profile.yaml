@@ -1,0 +1,97 @@
+zones_active:
+- input
+- memory
+- reasoning
+- tool_execution
+entry_points:
+- name: RAG knowledge retrieval response
+  entry_point_type: external_content
+  direction: input
+  controllability: indirect
+  ingress_zone: reasoning
+  entry_point_id: ep:v1:76ec9fe6eda22c1dd18b74bdde20412f
+confidence: high
+kc_subcodes:
+- KC1.1
+- KC2.1
+- KC3.3
+- KC4.3
+- KC5.3
+- KC6.1.2
+- KC6.3.2
+- KC6.3.3
+- KCX-HITL
+- KCX-PMEM
+tool_inventory:
+- name: refund processing API
+  description: Processes refunds for customer purchases, adjusting payment schedules
+    and account balances
+  tool_id: tool:v1:686a177b0b683316d0df4a9d41038239
+- name: payment scheduling API
+  description: Reschedules or adjusts payment due dates for buy-now-pay-later installments
+  tool_id: tool:v1:b0a9595b40da84e8046ceb53559c0579
+- name: order lookup API
+  description: Retrieves customer purchase history, order details, item prices, merchant
+    info, and payment status
+  tool_id: tool:v1:cc2ba705d533f0931919d677fead11ca
+- name: account details API
+  description: Accesses authenticated customer account information including payment
+    methods and account status
+  tool_id: tool:v1:49e648225fdd272ac8e500654eacbe2a
+- name: human agent escalation
+  description: Transfers the conversation to a human customer service agent when the
+    AI cannot resolve the issue
+  tool_id: tool:v1:34fe329b6b46631383354a9933e3fab4
+- name: RAG knowledge retrieval
+  description: Retrieves relevant support documentation and policy information to
+    ground responses
+  tool_id: tool:v1:9ee6557c598388d69979d25e3d1ce84e
+entry_point_completeness: inferred_partial
+entry_point_evidence: []
+tool_inventory_completeness: inferred_partial
+tool_inventory_evidence: []
+trust_boundaries:
+- name: retrieved-content-to-reasoning
+  from_zone: memory
+  to_zone: reasoning
+  controls:
+  - Retrieved content is untrusted data, not instructions
+  confidence: explicit
+  trust_boundary_id: tb:v1:7b77016ad5cc602d14fde6b199899d11
+- name: tool-result-to-assistant-reasoning
+  from_zone: tool_execution
+  to_zone: reasoning
+  controls:
+  - Instruction hierarchy
+  confidence: explicit
+  trust_boundary_id: tb:v1:a0ea6072da2c6b06208575522c977442
+external_integrations:
+- name: Klarna backend payment and refund services
+  integration_type: api
+  auth_method: service_account
+  data_sensitivity: high
+  integration_id: int:v1:5780b0785ebb0e45a32ef496e7a3f1f8
+- name: customer purchase and account data store
+  integration_type: api
+  auth_method: service_account
+  data_sensitivity: high
+  integration_id: int:v1:3d63ae70de1336e2109449d35eb9fba1
+- name: RAG knowledge base
+  integration_type: api
+  auth_method: service_account
+  data_sensitivity: medium
+  integration_id: int:v1:d84e8a021e34a1273bb5858c0065d61b
+has_persistent_memory: true
+multi_agent: false
+hitl: true
+kc_subcodes_display:
+  KC1.1: Large Language Model (LLM)
+  KC2.1: Predefined workflows
+  KC3.3: Chain of Thought (CoT)
+  KC4.3: In-agent, cross-session memory
+  KC5.3: Managed API
+  KC6.1.2: Extensive API access
+  KC6.3.2: Database full CRUD
+  KC6.3.3: RAG context data sources
+  KCX-HITL: System has human-in-the-loop review or approval controls
+  KCX-PMEM: System has persistent memory architecture (cross-session state)

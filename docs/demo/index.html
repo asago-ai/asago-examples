@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en" class="pf-v6-theme-dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Asago · Policy to model evaluation</title>
+    <link rel="stylesheet" href="./assets/patternfly.css" />
+    <link rel="stylesheet" href="./assets/branding.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./static-demo.js" defer></script>
+    <script src="./view-state.js" defer></script>
+    <script src="./app.js?v=5752a4031db3" defer></script>
+  </head>
+  <body class="asago-report">
+    <header class="asago-header studio-header">
+      <div class="brand">
+        <img src="./assets/logo.svg" alt="Asago" class="asago-logo" /><span
+          class="asago-product"
+          >Pipeline demo</span
+        >
+      </div>
+      <nav aria-label="Demo utilities">
+        <button id="recording" class="quiet" aria-pressed="false">
+          Recording view
+        </button>
+        <button
+          id="theme"
+          class="quiet"
+          aria-label="Toggle light and dark appearance"
+        >
+          Light mode
+        </button>
+        <button id="settings-open" class="quiet">
+          Models &amp; connections
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">POLICY-DRIVEN AGENTIC RED TEAMING</p>
+          <h1 class="asago-title">From policy to model evaluation.</h1>
+        </div>
+        <div class="launch">
+          <button id="run-all" class="primary">
+            Run demo <span aria-hidden="true">↗</span></button
+          ><button id="cancel" class="quiet danger" hidden>Stop run</button>
+        </div>
+      </section>
+      <div id="notice" class="notice" role="status" hidden></div>
+      <section id="saved-demo" class="saved-demo" aria-label="Saved demo" hidden>
+        <div><strong>Saved demo</strong><p id="saved-demo-detail"></p></div>
+        <a href="https://github.com/MuneezaAzmat/asago-examples/blob/codex/end-to-end-demo/asago-demo/README.md" target="_blank" rel="noreferrer">Run your own demo ↗</a>
+      </section>
+      <section class="context-strip" aria-label="Demo context">
+        <span><small>POLICY</small><strong>FS-ISAC generative AI</strong></span>
+        <span><small>SYSTEM</small><strong>Klarna support agent</strong></span>
+        <span
+          ><small>MODEL</small
+          ><strong id="model-label">Connecting…</strong></span
+        >
+        <span class="history-control"
+          ><label for="history">RUN</label
+          ><select id="history">
+            <option value="">New demo</option>
+          </select></span
+        >
+      </section>
+      <nav class="pipeline" aria-label="Pipeline stages">
+        <button class="stage active" data-tab="policy" aria-selected="true">
+          <span class="step">01</span
+          ><span class="stage-copy"
+            ><strong>Policy Mapper</strong
+            ><small>Policy → grounded risk evidence</small></span
+          ><span class="stage-state" id="policy-status">Saved input</span>
+        </button>
+        <button class="stage" data-tab="scenarios" aria-selected="false">
+          <span class="step">02</span
+          ><span class="stage-copy"
+            ><strong>Scenario Generator</strong
+            ><small>Risk evidence → adversarial scenarios</small></span
+          ><span class="stage-state" id="scenarios-status"
+            >Ready after policy</span
+          >
+        </button>
+        <button class="stage" data-tab="artifact" aria-selected="false">
+          <span class="step">03</span
+          ><span class="stage-copy"
+            ><strong>Artifact Generator</strong
+            ><small>Selected scenario → Garak artifact</small></span
+          ><span class="stage-state" id="artifact-status"
+            >Ready after scenarios</span
+          >
+        </button>
+        <button class="stage" data-tab="evaluation" aria-selected="false">
+          <span class="step">04</span
+          ><span class="stage-copy"
+            ><strong>Garak Evaluation</strong
+            ><small>Artifact → real target response & verdict</small></span
+          ><span class="stage-state" id="evaluation-status"
+            >Ready after artifact</span
+          >
+        </button>
+      </nav>
+      <section class="result-shell">
+        <header class="result-heading">
+          <div>
+            <p class="eyebrow" id="panel-kicker">01 / POLICY MAPPER</p>
+            <h2 id="panel-title">Policy findings</h2>
+            <p id="panel-description">
+              Explore the saved extraction using the interactive report from PR
+              #79.
+            </p>
+          </div>
+          <div class="result-actions">
+            <span id="elapsed" class="mono"></span
+            ><button id="run-stage" class="secondary">Load saved policy</button>
+          </div>
+        </header>
+        <form
+          id="scenario-options"
+          class="scenario-options"
+          hidden
+          aria-label="Scenario generation options"
+        >
+          <div class="scenario-options-heading">
+            <h3>Generation options</h3>
+          </div>
+          <div class="scenario-options-fields">
+            <label for="scenario-scope">
+              <span>Scenario search</span>
+              <select id="scenario-scope" aria-describedby="scope-help">
+                <option value="recording">Preset – prompt injection</option>
+                <option value="indirect">Preset – indirect injection</option>
+                <option value="full">Full search</option>
+              </select>
+              <small id="scope-help"></small>
+            </label>
+          </div>
+          <section id="search-plan" class="search-plan" aria-label="Full search tree" hidden>
+            <div class="search-plan-heading"><h3>Full search tree</h3>
+              <button type="button" id="expand-search-tree" class="quiet">Expand all seeds</button>
+            </div>
+            <p id="search-plan-summary" role="status">Loading the search plan…</p>
+            <div id="search-tree" class="search-tree"></div>
+            <p class="scenario-options-note">Branches show the initial seed × input × technique search. Rules and model qualification prune candidates before generation; final validation can reject scenarios.</p>
+          </section>
+          <p
+            id="generation-expectation"
+            class="generation-expectation"
+            role="status"
+          ></p>
+          <p class="scenario-options-note">
+            Changes are saved when you start scenario generation. Final counts
+            depend on qualification and validation.
+          </p>
+          <p id="run-generation-options" class="run-generation-options"></p>
+        </form>
+        <p id="stage-model-summary" class="stage-model-summary"></p>
+        <p
+          id="live-activity"
+          class="stage-model-summary"
+          role="status"
+          hidden
+        ></p>
+        <div id="results"></div>
+      </section>
+      <details id="logs" class="technical">
+        <summary>
+          Run activity <span id="log-state">No active generation</span>
+        </summary>
+        <div id="activity-details" class="activity-details" hidden></div>
+        <div id="activity-downloads" class="activity-downloads"></div>
+        <pre id="console" aria-live="off">
+Logs will appear here when a stage starts.</pre
+        >
+      </details>
+      <footer>
+        <span>Asago · Policy → scenario → artifact → evaluation</span
+        ><span
+          >Policy report:
+          <a
+            href="https://github.com/asago-ai/asago-policy-mapper/pull/79"
+            target="_blank"
+            rel="noreferrer"
+            >PR #79</a
+          >
+          · Garak:
+          <a
+            href="https://github.com/trustyai-explainability/garak/pull/11"
+            target="_blank"
+            rel="noreferrer"
+            >PR #11</a
+          ></span
+        >
+      </footer>
+    </main>
+    <dialog id="settings-dialog" aria-labelledby="models-title">
+      <form id="settings-form">
+        <div class="dialog-title">
+          <div>
+            <p class="eyebrow">MODEL SELECTION</p>
+            <h2 id="models-title">Models &amp; connections</h2>
+          </div>
+          <button
+            type="button"
+            id="settings-close"
+            class="quiet"
+            aria-label="Close settings"
+          >
+            ✕
+          </button>
+        </div>
+        <p>
+          Choose LiteLLM, Ollama or Google Gemini for each step. Policy Mapper
+          uses the saved extraction.
+        </p>
+        <div id="model-roles" class="model-roles"></div>
+        <p class="model-help">
+          Choose a tool-capable model for the Garak target. Model lists show
+          availability; successful generation also depends on the model and
+          endpoint.
+        </p>
+        <details class="service-connections" open>
+          <summary>Service connections</summary>
+          <div class="service-grid">
+            <section aria-labelledby="litellm-title">
+              <h3 id="litellm-title">LiteLLM</h3>
+              <label for="base-url">API base URL</label>
+              <input
+                id="base-url"
+                type="url"
+                placeholder="https://your-endpoint/v1"
+              />
+              <label for="api-key">API key</label>
+              <input
+                id="api-key"
+                type="password"
+                autocomplete="new-password"
+                placeholder="Leave blank to keep the configured key"
+              />
+              <small id="key-state"></small>
+              <button type="button" id="litellm-models-load" class="secondary">
+                Load LiteLLM models
+              </button>
+              <p id="litellm-models-status" role="status"></p>
+            </section>
+            <section aria-labelledby="ollama-title">
+              <h3 id="ollama-title">Ollama</h3>
+              <label for="ollama-base-url">API base URL</label>
+              <input
+                id="ollama-base-url"
+                type="url"
+                placeholder="http://127.0.0.1:11434/v1"
+              />
+              <p>
+                Lists models already installed in Ollama. Use its local address
+                or a reachable Ollama server.
+              </p>
+              <button type="button" id="ollama-models-load" class="secondary">
+                Load Ollama models
+              </button>
+              <p id="ollama-models-status" role="status"></p>
+            </section>
+            <section aria-labelledby="google-title">
+              <h3 id="google-title">Google Gemini</h3>
+              <label for="google-api-key">Google API key</label>
+              <input
+                id="google-api-key"
+                type="password"
+                autocomplete="new-password"
+                placeholder="Leave blank to keep the configured key"
+              />
+              <small id="google-key-state"></small>
+              <p>
+                Use your Google AI Studio key. Connects directly to Google;
+                choose a Gemini Flash or other available chat model.
+              </p>
+              <button type="button" id="google-models-load" class="secondary">
+                Load Google models
+              </button>
+              <p id="google-models-status" role="status"></p>
+            </section>
+          </div>
+        </details>
+        <p id="connection-state" role="status"></p>
+        <div class="dialog-actions">
+          <span>Applies to future runs.</span
+          ><button id="models-save" type="submit" class="primary">
+            Save model choices
+          </button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

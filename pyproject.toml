@@ -7,6 +7,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+demo = ["asago-demo-examples"]
 policy-mapper = [
     "asago-policy-mapper-examples",
 ]
@@ -18,6 +19,8 @@ scenario-generator = [
 ]
 
 [tool.uv]
+# Retain the existing lockfile publication cutoff for reproducible resolution.
+exclude-newer = "2026-08-27T13:08:27.015681Z"
 # asago-policy-mapper declares ai-atlas-nexus floating on @main; override it to the
 # release whose data schema the notebooks and example inputs are built against.
 override-dependencies = [
@@ -28,6 +31,7 @@ override-dependencies = [
 members = ["asago-*"]
 
 [tool.uv.sources]
+asago-demo-examples = { workspace = true }
 asago-policy-mapper-examples = { workspace = true }
 asago-artifact-generator-examples = { workspace = true }
 asago-scenario-generator-examples = { workspace = true }

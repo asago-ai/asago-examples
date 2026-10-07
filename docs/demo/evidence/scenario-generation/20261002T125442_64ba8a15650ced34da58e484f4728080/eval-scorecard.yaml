@@ -1,0 +1,638 @@
+schema_version: '1'
+manifest_version: '3'
+run_id: 20261002T125442_64ba8a15650ced34da58e484f4728080
+scenario_count: 3
+feature_file_count: 3
+presence_coverage:
+  metrics:
+    nonempty_admitted_inventory:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 0
+      denominator: null
+      value: null
+      evidence:
+      - finalization-inventory.json:admitted_inventory must be nonempty
+      affected_ids: []
+    manifest_evaluated_count_coherence:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 0
+      denominator: null
+      value: null
+      evidence:
+      - manifest YAML/feature inventory
+      - finalization-inventory.json:admitted_inventory
+      affected_ids: []
+    manifest_pair_coherence:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 0
+      denominator: null
+      value: null
+      evidence:
+      - finalization-inventory.json:admitted_inventory
+      affected_ids: []
+    canonical_entry_point_coverage:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 1.0
+      numerator: 1
+      denominator: 1
+      value: 1.0
+      evidence:
+      - coverage-plan.json:targets
+      - admitted scenario initial_entry_point_id
+      - completeness=not_applicable
+      affected_ids: []
+    unknown_entry_point_count:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 0
+      denominator: null
+      value: null
+      evidence:
+      - coverage-plan.json:targets
+      - scenario.initial_entry_point_id
+      affected_ids: []
+    stale_or_orphan_artifact_count:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 0
+      denominator: null
+      value: null
+      evidence:
+      - strict finalized resolver orphan check
+      affected_ids: []
+    missing_pair_count:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 0
+      denominator: null
+      value: null
+      evidence:
+      - manifest YAML/feature pairing
+      - finalization admitted receipts
+      affected_ids: []
+    duplicate_or_overwritten_artifact_count:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 0
+      denominator: null
+      value: null
+      evidence:
+      - strict resolver canonical-path, inode, identity, and hash checks
+      affected_ids: []
+    unmanifested_artifact_count:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 0
+      denominator: null
+      value: null
+      evidence:
+      - strict finalized resolver orphan check
+      affected_ids: []
+validity_grounding:
+  metrics:
+    scenario_schema_validity:
+      status: pass
+      definition_version: '1'
+      threshold: 1.0
+      numerator: 3
+      denominator: 3
+      value: 1.0
+      evidence:
+      - ScenarioEnvelope schema validation
+      affected_ids: []
+    admission_failure_rate:heuristic_correspondence:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 1
+      denominator: 3
+      value: 0.3333333333333333
+      evidence:
+      - finalization-inventory.json:violation_code=heuristic_correspondence
+      affected_ids:
+      - cand:v2:0c4f1c51d0d932e6a053b14f4ec785b0
+    admission_failure_rate:zone_difference:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 3
+      denominator: 3
+      value: 1.0
+      evidence:
+      - finalization-inventory.json:violation_code=zone_difference
+      affected_ids:
+      - cand:v2:0c4f1c51d0d932e6a053b14f4ec785b0
+      - cand:v2:0e61f6638f975e58e5eef029d5de4fc9
+      - cand:v2:0f870b8bf8a64255a54e98f6ccccc2df
+    admission_gate_failure_rate:actor_attack_complexity:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=actor_attack_complexity
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:behavior_correspondence:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=behavior_correspondence
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:capability_grounding:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=capability_grounding
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:catalog_taxonomy_pin_validity:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=catalog_taxonomy_pin_validity
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:data_access_grounding:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=data_access_grounding
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:execution_requirement_drift:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=execution_requirement_drift
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:identifier_validity:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=identifier_validity
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:identity:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=identity
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:narrative_tree_diagnostics:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=narrative_tree_diagnostics
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:or_tree_prohibition:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=or_tree_prohibition
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:phantom_validity:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=phantom_validity
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:projection_traceability:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=projection_traceability
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:resource_binding_validity:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=resource_binding_validity
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:semantic_validity:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=semantic_validity
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:structural_validity:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=structural_validity
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:tool_integration_grounding:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=tool_integration_grounding
+      - denominator=gate outcomes (3)
+      affected_ids: []
+    admission_gate_failure_rate:tree_parsimony:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 0
+      denominator: 3
+      value: 0.0
+      evidence:
+      - typed admission evidence_id=tree_parsimony
+      - denominator=gate outcomes (3)
+      affected_ids: []
+cross_artifact_agreement:
+  metrics:
+    pinned_technique_recall:
+      status: pass
+      definition_version: '1'
+      threshold: 1.0
+      numerator: 3
+      denominator: 3
+      value: 1.0
+      evidence:
+      - coverage-plan pinned_technique_ids
+      - admitted scenario classifications
+      affected_ids: []
+    projected_step_recall:
+      status: pass
+      definition_version: '1'
+      threshold: 1.0
+      numerator: 15
+      denominator: 15
+      value: 1.0
+      evidence:
+      - persisted projection selected_step_ids
+      - artifact projected_step_ids
+      affected_ids: []
+    exact_tree_behavior_correspondence:
+      status: pass
+      definition_version: '1'
+      threshold: 1.0
+      numerator: 3
+      denominator: 3
+      value: 1.0
+      evidence:
+      - attack-tree leaves
+      - structured behavior actions
+      - projection
+      affected_ids: []
+    vacuous_agreement_count:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 0
+      denominator: null
+      value: null
+      evidence:
+      - empty pinned and attack-tree technique sets are not agreement
+      affected_ids: []
+    projection_conditional_decision_coverage:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 1.0
+      numerator: 0
+      denominator: 0
+      value: null
+      evidence:
+      - projection source_chain conditional steps
+      - projection condition_results; denominator=conditional source steps
+      affected_ids: []
+    projection_mapping_coverage:
+      status: fail
+      definition_version: '1'
+      threshold: 1.0
+      numerator: 9
+      denominator: 18
+      value: 0.5
+      evidence:
+      - projection.projected_mappings mapping decisions
+      affected_ids: []
+    projection_mapping_status:exact:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 9
+      denominator: 18
+      value: 0.5
+      evidence:
+      - projection.projected_mappings
+      affected_ids: []
+    projection_mapping_status:not_applicable:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 9
+      denominator: 18
+      value: 0.5
+      evidence:
+      - projection.projected_mappings
+      affected_ids: []
+semantic_quality_diagnostics:
+  metrics:
+    exact_normalized_title_duplicate_count:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 0
+      denominator: null
+      value: null
+      evidence:
+      - normalized duplicate groups=[]
+      affected_ids: []
+    near_duplicate_title_component_count:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 1
+      denominator: null
+      value: null
+      evidence:
+      - deterministic Jaccard threshold=0.6
+      - components=[['scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e',
+        'scenario:v2:97e7e7ba45beb7212c97374d7b81ff3b8fdb25e9a36d0c23495ce9323111cc8d']]
+      affected_ids:
+      - scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e
+      - scenario:v2:97e7e7ba45beb7212c97374d7b81ff3b8fdb25e9a36d0c23495ce9323111cc8d
+    near_duplicate_title_affected_rate:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 2
+      denominator: 3
+      value: 0.6666666666666666
+      evidence:
+      - components=[['scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e',
+        'scenario:v2:97e7e7ba45beb7212c97374d7b81ff3b8fdb25e9a36d0c23495ce9323111cc8d']]
+      affected_ids:
+      - scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e
+      - scenario:v2:97e7e7ba45beb7212c97374d7b81ff3b8fdb25e9a36d0c23495ce9323111cc8d
+    structural_graph_component_count:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 1
+      denominator: null
+      value: null
+      evidence:
+      - exact selected-step structural signatures; components=[['scenario:v2:6c0acbc3f024383f6fcf3722c1786534bfdae43cfb373776a27b66cd1afde164',
+        'scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e',
+        'scenario:v2:97e7e7ba45beb7212c97374d7b81ff3b8fdb25e9a36d0c23495ce9323111cc8d']]
+      affected_ids:
+      - scenario:v2:6c0acbc3f024383f6fcf3722c1786534bfdae43cfb373776a27b66cd1afde164
+      - scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e
+      - scenario:v2:97e7e7ba45beb7212c97374d7b81ff3b8fdb25e9a36d0c23495ce9323111cc8d
+    structural_graph_affected_rate:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 3
+      denominator: 3
+      value: 1.0
+      evidence:
+      - components=[['scenario:v2:6c0acbc3f024383f6fcf3722c1786534bfdae43cfb373776a27b66cd1afde164',
+        'scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e',
+        'scenario:v2:97e7e7ba45beb7212c97374d7b81ff3b8fdb25e9a36d0c23495ce9323111cc8d']]
+      affected_ids:
+      - scenario:v2:6c0acbc3f024383f6fcf3722c1786534bfdae43cfb373776a27b66cd1afde164
+      - scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e
+      - scenario:v2:97e7e7ba45beb7212c97374d7b81ff3b8fdb25e9a36d0c23495ce9323111cc8d
+    narrative_tree_zone_difference_rate:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 3
+      denominator: 3
+      value: 1.0
+      evidence:
+      - typed narrative.step.zone versus attack_tree leaf.zone sets
+      affected_ids:
+      - scenario:v2:6c0acbc3f024383f6fcf3722c1786534bfdae43cfb373776a27b66cd1afde164
+      - scenario:v2:6ef9a8f7910248af4a4e6a88a94fc9bfefbafea184df4f523a8cbbf5ed4ac41e
+      - scenario:v2:97e7e7ba45beb7212c97374d7b81ff3b8fdb25e9a36d0c23495ce9323111cc8d
+    narrative_tree_zone_difference_size:1:
+      status: not_applicable
+      definition_version: '1'
+      threshold: 0.0
+      numerator: 3
+      denominator: 3
+      value: 1.0
+      evidence:
+      - symmetric zone-set difference size distribution
+      - denominator=admitted scenario artifacts
+      affected_ids: []
+release_qualification:
+  metrics:
+    zero_quarantine:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 0
+      denominator: null
+      value: null
+      evidence:
+      - finalization-inventory.json:quarantine_inventory
+      affected_ids: []
+    persisted_admission_traceability_outcome:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 0
+      denominator: null
+      value: null
+      evidence:
+      - exact evaluated candidate IDs equal persisted admitted decisions
+      affected_ids: []
+    actor_attack_complexity:
+      status: pass
+      definition_version: '1'
+      threshold: 1.0
+      numerator: 1
+      denominator: 1
+      value: 1.0
+      evidence:
+      - finalization-inventory.json:typed admission gate outcomes
+      affected_ids: []
+    capability_grounding:
+      status: pass
+      definition_version: '1'
+      threshold: 1.0
+      numerator: 1
+      denominator: 1
+      value: 1.0
+      evidence:
+      - finalization-inventory.json:typed admission gate outcomes
+      - explicit capability semantic-rule category
+      affected_ids: []
+    tool_integration_grounding:
+      status: not_applicable
+      definition_version: '1'
+      threshold: null
+      numerator: null
+      denominator: null
+      value: null
+      evidence:
+      - finalization-inventory.json:typed admission gate outcomes
+      - tool_inventory_completeness=inferred_partial
+      - no exact passed admitted outcome
+      affected_ids:
+      - cand:v2:0c4f1c51d0d932e6a053b14f4ec785b0
+      - cand:v2:0e61f6638f975e58e5eef029d5de4fc9
+      - cand:v2:0f870b8bf8a64255a54e98f6ccccc2df
+    data_access_grounding:
+      status: not_applicable
+      definition_version: '1'
+      threshold: null
+      numerator: null
+      denominator: null
+      value: null
+      evidence:
+      - finalization-inventory.json:typed admission gate outcomes
+      - entry_point_completeness=inferred_partial
+      - no exact passed admitted outcome
+      affected_ids:
+      - cand:v2:0c4f1c51d0d932e6a053b14f4ec785b0
+      - cand:v2:0e61f6638f975e58e5eef029d5de4fc9
+      - cand:v2:0f870b8bf8a64255a54e98f6ccccc2df
+    catalog_taxonomy_pin_validity:
+      status: pass
+      definition_version: '1'
+      threshold: 1.0
+      numerator: 1
+      denominator: 1
+      value: 1.0
+      evidence:
+      - finalization-inventory.json:typed admission gate outcomes
+      affected_ids: []
+    resource_binding_validity:
+      status: pass
+      definition_version: '1'
+      threshold: 1.0
+      numerator: 1
+      denominator: 1
+      value: 1.0
+      evidence:
+      - finalization-inventory.json:typed admission gate outcomes
+      affected_ids: []
+    execution_requirement_drift:
+      status: pass
+      definition_version: '1'
+      threshold: 1.0
+      numerator: 1
+      denominator: 1
+      value: 1.0
+      evidence:
+      - finalization-inventory.json:typed admission gate outcomes
+      affected_ids: []
+    zero_schema_identifier_phantom_parsimony_failures:
+      status: pass
+      definition_version: '1'
+      threshold: 1.0
+      numerator: 1
+      denominator: 1
+      value: 1.0
+      evidence:
+      - finalization-inventory.json:typed admission gate outcomes
+      affected_ids: []
+    kill_chain_quarantine_reasons:
+      status: pass
+      definition_version: '1'
+      threshold: null
+      numerator: 0
+      denominator: null
+      value: null
+      evidence:
+      - quarantine IDs; reason categories remain in persisted admission decisions/bundles
+      affected_ids: []
+qualification:
+  status: pass
+  applicable_gate_count: 21
+  passed_gate_count: 21
+  failed_gate_ids: []
+  error_gate_ids: []
+  not_applicable_gate_ids:
+  - data_access_grounding
+  - tool_integration_grounding
+  blocking_not_applicable_gate_ids: []
