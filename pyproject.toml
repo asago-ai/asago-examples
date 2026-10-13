@@ -19,7 +19,7 @@ scenario-generator = [
 
 [dependency-groups]
 dev = [
-    "nbformat>=5.10",
+    "nbformat>=5.11.1",
     "pytest>=8.0",
 ]
 
