@@ -17,6 +17,12 @@ scenario-generator = [
     "asago-scenario-generator-examples",
 ]
 
+[dependency-groups]
+dev = [
+    "nbformat>=5.10",
+    "pytest>=8.0",
+]
+
 [tool.uv]
 # asago-policy-mapper declares ai-atlas-nexus floating on @main; override it to the
 # release whose data schema the notebooks and example inputs are built against.
